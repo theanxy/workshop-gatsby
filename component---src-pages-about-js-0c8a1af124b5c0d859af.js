@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{188:function(e,n,t){"use strict";t.r(n);var a=t(0),o=t.n(a);n.default=function(){return o.a.createElement("div",{style:{color:"teal"}},o.a.createElement("h1",null,"About page"))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-0c8a1af124b5c0d859af.js.map
