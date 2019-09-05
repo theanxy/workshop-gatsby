@@ -1,38 +1,34 @@
 import React from "react"
+import Item from "../components/item"
 
 class Swahilibox extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      index: 0,
+      todos: [
+        {
+          title: "Buy grocery",
+        },
+        {
+          title: "Tidy up room",
+        },
+        {
+          title: "Have dinner",
+        },
+      ],
     }
   }
 
   render() {
-    const resetCounter = () => this.setState({ index: 0 })
-
     return (
       <div>
         <h3>I am a class component!</h3>
-        <p>Current index: {this.state.index}</p>
-        <button
-          onClick={() =>
-            this.setState({
-              index: this.state.index + 1,
-            })
-          }
-        >
-          Bump index
-        </button>
-        <button onClick={resetCounter}>Reset</button>
+
+        {this.state.todos.map(val => (
+          <Item key={val.title} title={val.title} />
+        ))}
       </div>
     )
-  }
-}
-
-class SecondClass extends React.Component {
-  render() {
-    return <div>Second class</div>
   }
 }
 
